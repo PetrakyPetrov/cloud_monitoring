@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import time
 import os
-
+# TODO: Add logger
 from http.server import HTTPServer
 from server import Server
 
