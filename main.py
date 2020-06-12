@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import time
 import os
-# TODO: Add logger
+
 from http.server import HTTPServer
 from server import Server
 
+# TODO: Add logger
 HOST_NAME = os.environ.get('HOST_API_URL', "localhost")
 PORT_NUMBER = os.environ.get('HOST_API_PORT', 8000)
 
