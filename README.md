@@ -1,2 +1,2 @@
-# cloud_monitoring_scripts
-General cloud monitoring tools
+# cloud_monitoring_API
+General cloud monitoring agent
