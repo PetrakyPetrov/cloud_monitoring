@@ -1,2 +1,2 @@
-# cloud_monitoring_API
+# Cloud monitoring REST API
 General cloud monitoring agent
