@@ -1,5 +1,15 @@
+import logging
+
 from http.server import BaseHTTPRequestHandler
 from routes.main import get_routes
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename='/var/log/cloud_monitoring_api.log',
+    format='%(asctime)s - %(name)s - %(levelname)s: %(message)s'
+)
+
+logger = logging.getLogger("server.py")
 
 
 class Server(BaseHTTPRequestHandler):
@@ -24,6 +34,12 @@ class Server(BaseHTTPRequestHandler):
         else:
             route_content = self.__parse_route(get_routes, self.path)
 
+        logger.info("\"{method} {url}\" {status} {referrer}".format(
+            method=method,
+            url=self.path,
+            status=status,
+            referrer=self.client_address[0]
+        ))
         return bytes(route_content, "UTF-8")
 
     def respond(self, method="GET"):
