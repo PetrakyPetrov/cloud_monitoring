@@ -1,10 +1,10 @@
 # Cloud monitoring REST API
 General cloud monitoring agent
 
-Requirements:
+**Requirements:**
 
 OS: Linux
 
-Dependencies:
+**Dependencies:**
 
 Python 3
