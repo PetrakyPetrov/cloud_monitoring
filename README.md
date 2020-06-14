@@ -3,8 +3,8 @@ General cloud monitoring agent
 
 **Requirements:**
 
-OS: Linux
+ - OS: Linux
 
 **Dependencies:**
 
-Python 3
+ - Python 3
