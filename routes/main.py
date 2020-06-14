@@ -6,4 +6,5 @@ get_routes = {
     "/all": system_info_check.SystemInfoCheck().get_all(),
     "/disk": system_info_check.SystemInfoCheck("disk").get_disk(),
     "/memory": system_info_check.SystemInfoCheck("memory").get_memory(),
+    "/cpu": system_info_check.SystemInfoCheck("cpu").get_cpu(),
 }
