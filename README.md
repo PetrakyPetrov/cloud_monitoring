@@ -1,5 +1,5 @@
-# Cloud monitoring REST API
-General cloud monitoring agent
+# Cloud server monitoring REST API
+General cloud server monitoring agent
 
 **Requirements:**
 
