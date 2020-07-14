@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__file__)
 
 HOST_NAME = os.environ.get('HOST_API_URL', "localhost")
-PORT = os.environ.get('HOST_API_PORT', 8000)
+PORT = os.environ.get('HOST_API_PORT', 4501)
 
 if __name__ == '__main__':
 
