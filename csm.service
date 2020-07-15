@@ -1,0 +1,14 @@
+# /etc/systemd/system/csm.service
+[Unit]
+Description=Cloud server monitoring service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/env python3 /home/petraki/cloud_system/cloud_server_monitoring_api/main.py
+
+[Install]
+WantedBy=multi-user.target
