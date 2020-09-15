@@ -10,12 +10,12 @@ class SystemInfoCheck:
     def __init__(self, sys_info_type="all"):
 
         if sys_info_type == "memory" or sys_info_type == "all":
-            free_output = subprocess.check_output("free")
+            free_output = subprocess.check_output("free -h")
             for line in free_output.splitlines():
                 self.__memory += "{row}\n".format(row=line.decode("utf-8"))
 
         if sys_info_type == "disk" or sys_info_type == "all":
-            df_output = subprocess.check_output("df")
+            df_output = subprocess.check_output("df -h")
             for line in df_output.splitlines():
                 self.__disk += "{row}\n".format(row=line.decode("utf-8"))
 
