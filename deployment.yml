@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: monitoring-api-service
+spec:
+  selector:
+    app: monitoring-api
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 4501
+    nodePort: 30001
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monitoring-api
+spec:
+  selector:
+    matchLabels:
+      app: monitoring-api
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: monitoring-api
+    spec:
+      containers:
+      - name: monitoring-api
+        image: monitoring-api:1.0.2
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 4501
